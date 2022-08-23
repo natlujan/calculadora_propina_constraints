@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="propina_interacciones" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa el total de la cuenta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dc-Cn-hiT" userLabel="lbl-ingresar">
+                                <rect key="frame" x="20" y="44" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJu-Cc-aqJ" userLabel="txt-poner-precio">
+                                <rect key="frame" x="20" y="73" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="doChangePrecio:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hgl-mc-ksS"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="35" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-fQ-Epy">
+                                <rect key="frame" x="18" y="151" width="339" height="31"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="doChangePorpina:" destination="BYZ-38-t0r" eventType="valueChanged" id="ON0-Xw-xgA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porcentaje de propina:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBh-zR-ZjL" userLabel="lbl-cuanto-dejar">
+                                <rect key="frame" x="20" y="113" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-x1-BxZ" userLabel="lbl-precio-total">
+                                <rect key="frame" x="20" y="270" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Propina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-hG-NXu" userLabel="lbl-propina-total">
+                                <rect key="frame" x="20" y="241" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0G-p6-71C" userLabel="lbl-show-propina-total">
+                                <rect key="frame" x="326" y="241" width="10.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-Ok-yv6" userLabel="lbl-porcentaje">
+                                <rect key="frame" x="320.66666666666669" y="189" width="34.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Md-Bp-ZWs" userLabel="lbl-show-precio-total">
+                                <rect key="frame" x="325.66666666666669" y="270" width="10.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Dc-Cn-hiT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2W2-kL-9Bc"/>
+                            <constraint firstItem="bqs-x1-BxZ" firstAttribute="top" secondItem="JKr-hG-NXu" secondAttribute="bottom" constant="8" id="3Nc-kU-1Xc"/>
+                            <constraint firstItem="oBh-zR-ZjL" firstAttribute="top" secondItem="BJu-Cc-aqJ" secondAttribute="bottom" constant="10" id="408-41-hHf"/>
+                            <constraint firstItem="SzS-fQ-Epy" firstAttribute="top" secondItem="oBh-zR-ZjL" secondAttribute="bottom" constant="17" id="D7k-hX-9Zy"/>
+                            <constraint firstItem="fwM-Ok-yv6" firstAttribute="top" secondItem="SzS-fQ-Epy" secondAttribute="bottom" constant="8" id="OQZ-OJ-500"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SzS-fQ-Epy" secondAttribute="trailing" constant="20" id="RBt-jr-e4L"/>
+                            <constraint firstItem="SzS-fQ-Epy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UJb-yX-luW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Md-Bp-ZWs" secondAttribute="trailing" constant="38.700000000000003" id="Wmu-2a-AYX"/>
+                            <constraint firstItem="BJu-Cc-aqJ" firstAttribute="top" secondItem="8Dc-Cn-hiT" secondAttribute="bottom" constant="8" id="Ylc-eC-UYf"/>
+                            <constraint firstItem="1Md-Bp-ZWs" firstAttribute="top" secondItem="o0G-p6-71C" secondAttribute="bottom" constant="8" id="YvW-lc-Wed"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o0G-p6-71C" secondAttribute="trailing" constant="38.700000000000003" id="eEl-E6-xNk"/>
+                            <constraint firstItem="bqs-x1-BxZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gsr-CT-5r5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BJu-Cc-aqJ" secondAttribute="trailing" constant="20" id="hbP-2E-2wN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fwM-Ok-yv6" secondAttribute="trailing" constant="20" id="nsH-LM-NPQ"/>
+                            <constraint firstItem="BJu-Cc-aqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pgp-HN-FU0"/>
+                            <constraint firstItem="o0G-p6-71C" firstAttribute="top" secondItem="fwM-Ok-yv6" secondAttribute="bottom" constant="31" id="q07-dM-2uK"/>
+                            <constraint firstItem="JKr-hG-NXu" firstAttribute="top" secondItem="SzS-fQ-Epy" secondAttribute="bottom" constant="60" id="sj9-t3-LNl"/>
+                            <constraint firstItem="8Dc-Cn-hiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vZO-iM-XZ6"/>
+                            <constraint firstItem="oBh-zR-ZjL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y4K-5r-0J3"/>
+                            <constraint firstItem="JKr-hG-NXu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zYJ-w0-kSL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oBh-zR-ZjL" secondAttribute="trailing" constant="20" id="zmF-cD-ugU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblPorcentaje" destination="fwM-Ok-yv6" id="aow-Vh-c9j"/>
+                        <outlet property="lblPrecioTotal" destination="1Md-Bp-ZWs" id="CFs-hc-t4L"/>
+                        <outlet property="lblPropinaTotal" destination="o0G-p6-71C" id="SEW-Fn-U5b"/>
+                        <outlet property="sldPropinaOutlet" destination="SzS-fQ-Epy" id="L04-EY-8Y1"/>
+                        <outlet property="txtPrecioOutlet" destination="BJu-Cc-aqJ" id="PAF-18-XZ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.22660098522168"/>
+        </scene>
+    </scenes>
+</document>
